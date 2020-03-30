@@ -2,26 +2,15 @@
     "$kind": "Microsoft.AdaptiveDialog",
     "triggers": [
         {
-            "$kind": "Microsoft.OnUnknownIntent",
+            "$kind": "Microsoft.OnBeginDialog",
             "actions": [
                 {
                     "$kind": "Microsoft.SendActivity",
-                    "activity": "You said '${turn.activity.text}'"
-                }
-            ]
-        },
-        {
-            "$kind": "Microsoft.OnEndOfActions",
-            "condition": "!turn.isTrue",
-            "actions": [
-                {
-                    "$kind": "Microsoft.SendActivity",
-                    "activity": "In end of actions"
+                    "activity": "Hello"
                 },
                 {
-                    "$kind": "Microsoft.SetProperty",
-                    "property": "turn.isTrue",
-                    "value": "=true"
+                    "$kind": "Microsoft.BeginDialog",
+                    "dialog": "child1"
                 }
             ]
         }
