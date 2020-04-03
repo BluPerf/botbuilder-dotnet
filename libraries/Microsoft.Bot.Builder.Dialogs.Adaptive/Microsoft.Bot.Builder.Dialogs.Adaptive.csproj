@@ -29,10 +29,11 @@
 
   <ItemGroup>
     <Content Include="**/*.dialog" />
-    <Content Include="Schemas/**/*.json" />
     <Content Include="**/*.lg" />
     <Content Include="**/*.lu" />
     <Content Include="**/*.schema" />
+    <Content Include="**/*.qna"/>
+    <Content Include="**/*.json"/>
   </ItemGroup>
 
   <ItemGroup>
